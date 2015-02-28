@@ -1,0 +1,5 @@
+C:\Users\Administrator\AndroidStudioProjects\geister\app\build\intermediates\classes\debug
+C:\Users\Administrator\AndroidStudioProjects\geister\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-925875d9448dd345587cabdb9a56f4834d2efae9.jar
+C:\Users\Administrator\AndroidStudioProjects\geister\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-74d4fbbc06a994477ac62def3001e4d3b5393602.jar
+C:\Users\Administrator\AndroidStudioProjects\geister\app\build\intermediates\pre-dexed\debug\classes-dfe181c57aebdef9b7633933c88e68bcb502e424.jar
+C:\Users\Administrator\AndroidStudioProjects\geister\app\build\intermediates\pre-dexed\debug\classes-a5599d7142fbb5bdfbff6a12a6dd1118ca7bd7d5.jar

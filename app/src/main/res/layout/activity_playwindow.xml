@@ -22,59 +22,35 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
-<<<<<<< HEAD
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
                     android:id="@+id/s0"
                     android:onClick="onClickBoard" />
-=======
-                <Space
-
-                    android:layout_width="59dp"
-                    android:layout_height="75dp"
-                    android:id="@+id/s0" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/s1"
                 />
-=======
-                    android:id="@+id/s1" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/s2"
                 />
-=======
-                    android:id="@+id/s2" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/s3"
-                  />
-=======
-                    android:id="@+id/s3" />
->>>>>>> origin/howtoplay
-
+                />
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/s4"
-                  />
-=======
-                    android:id="@+id/s4" />
->>>>>>> origin/howtoplay
+                />
+
 
                 <ImageView
                     android:layout_width="59dp"
@@ -121,10 +97,7 @@
                     android:layout_width="59dp"
                     android:layout_height="75dp"
                     android:id="@+id/s11" />
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/howtoplay
             </LinearLayout>
         </TableRow>
 
@@ -145,12 +118,8 @@
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/s13" />
-=======
-                    android:id="@+id/s13"
-                    android:focusableInTouchMode="false" />
->>>>>>> origin/howtoplay
+
 
                 <ImageView
                     android:layout_width="59dp"
@@ -171,10 +140,7 @@
                     android:layout_width="59dp"
                     android:layout_height="75dp"
                     android:id="@+id/s17" />
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/howtoplay
             </LinearLayout>
         </TableRow>
 
@@ -190,56 +156,34 @@
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank11" />
-=======
-                    android:id="@+id/s18" />
->>>>>>> origin/howtoplay
+
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank12" />
-=======
-                    android:id="@+id/s19" />
->>>>>>> origin/howtoplay
+
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank13" />
-=======
-                    android:id="@+id/s20" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank14" />
-=======
-                    android:id="@+id/s21" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank15" />
-=======
-                    android:id="@+id/s22" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank16" />
-=======
-                    android:id="@+id/s23" />
->>>>>>> origin/howtoplay
             </LinearLayout>
         </TableRow>
 
@@ -255,61 +199,36 @@
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank17" />
-=======
-                    android:id="@+id/s24" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/white_ghost1"
                     android:src="@drawable/ghost_white" />
-=======
-                    android:id="@+id/s25" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/white_ghost2"
                     android:src="@drawable/ghost_white" />
-=======
-                    android:id="@+id/s26" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/white_ghost3"
                     android:src="@drawable/ghost_white" />
-=======
-                    android:id="@+id/s27" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/white_ghost4"
                     android:src="@drawable/ghost_white" />
-=======
-                    android:id="@+id/s28" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank18" />
-
-=======
-                    android:id="@+id/s29" />
->>>>>>> origin/howtoplay
             </LinearLayout>
         </TableRow>
 
@@ -325,60 +244,36 @@
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank19" />
-=======
-                    android:id="@+id/s30" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/white_ghost5"
                     android:src="@drawable/ghost_white" />
-=======
-                    android:id="@+id/s31" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/white_ghost6"
                     android:src="@drawable/ghost_white" />
-=======
-                    android:id="@+id/s32" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/white_ghost7"
                     android:src="@drawable/ghost_white" />
-=======
-                    android:id="@+id/s33" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/white_ghost8"
                     android:src="@drawable/ghost_white" />
-=======
-                    android:id="@+id/s34" />
->>>>>>> origin/howtoplay
 
                 <ImageView
                     android:layout_width="59dp"
                     android:layout_height="75dp"
-<<<<<<< HEAD
                     android:id="@+id/blank20" />
-=======
-                    android:id="@+id/s35" />
->>>>>>> origin/howtoplay
             </LinearLayout>
         </TableRow>
 

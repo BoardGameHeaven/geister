@@ -25,28 +25,35 @@
                 android:layout_height="fill_parent">
 
                 <Space
+
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s0" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s1" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s2" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s3" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s4" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s5" />
             </LinearLayout>
         </TableRow>
 
@@ -61,27 +68,33 @@
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s6" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s7" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s8" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s9" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s10" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s11" />
             </LinearLayout>
         </TableRow>
 
@@ -96,27 +109,34 @@
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s12" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s13"
+                    android:focusableInTouchMode="false" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s14" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s15" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s16" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s17" />
             </LinearLayout>
         </TableRow>
 
@@ -131,27 +151,33 @@
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s18" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s19" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s20" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s21" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s22" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s23" />
             </LinearLayout>
         </TableRow>
 
@@ -166,27 +192,33 @@
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s24" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s25" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s26" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s27" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s28" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s29" />
             </LinearLayout>
         </TableRow>
 
@@ -201,27 +233,33 @@
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s30" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s31" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s32" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s33" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s34" />
 
                 <Space
                     android:layout_width="59dp"
-                    android:layout_height="75dp" />
+                    android:layout_height="75dp"
+                    android:id="@+id/s35" />
             </LinearLayout>
         </TableRow>
 

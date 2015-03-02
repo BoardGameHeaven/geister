@@ -1,19 +1,37 @@
 package study.cs.kookmin.ac.kr.geister;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 
 public class playwindow extends ActionBarActivity {
+
+    ImageView[]  imgBoard = new ImageView[36];
+    Board[] board = new Board[36];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playwindow);
-    }
 
+
+        int tmpID;
+
+        for(int i=0; i<10; i++) {
+            tmpID = getResources().getIdentifier("s" + i, "id", "playwindow");
+            imgBoard[i] = (ImageView) findViewById(tmpID);
+        }
+    }
+    public void onClickBoard(View v){
+        ImageView image = (ImageView) v;
+        image.setImageResource(R.drawable.ghost_black);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

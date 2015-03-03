@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">geister</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_playwindow">Geister</string>
+    <string name="title_activity_howtoplay">howtoplay</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_howtoplay2">howtoplay2</string>
+    <string name="title_activity_howtoplay3">howtoplay</string>
+    <string name="title_activity_howtoplay4">howtoplay</string>
+    <string name="title_activity_howtoplayend">howtoplay</string>
+    <string name="title_activity_howtoplay5">howtoplay</string>
+
+</resources>

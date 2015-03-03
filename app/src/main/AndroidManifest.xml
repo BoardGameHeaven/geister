@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="study.cs.kookmin.ac.kr.geister" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Geister"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".playwindow"
+            android:label="@string/title_activity_playwindow" >
+        </activity>
+        <activity
+            android:name=".howtoplay"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_howtoplay" >
+        </activity>
+        <activity
+            android:name=".howtoplay2"
+            android:label="@string/title_activity_howtoplay2" >
+        </activity>
+        <activity
+            android:name=".howtoplay3"
+            android:label="@string/title_activity_howtoplay3" >
+        </activity>
+        <activity
+            android:name=".howtoplay4"
+            android:label="@string/title_activity_howtoplay4" >
+        </activity>
+        <activity
+            android:name=".howtoplayend"
+            android:label="@string/title_activity_howtoplayend" >
+        </activity>
+        <activity
+            android:name=".howtoplay5"
+            android:label="@string/title_activity_howtoplay5" >
+        </activity>
+    </application>
+
+</manifest>

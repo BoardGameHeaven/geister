@@ -11,13 +11,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class playwindow extends ActionBarActivity {
 
     ImageView[]  imgBoard = new ImageView[36];
-    Board gBoard = new Board();
 
     View turnWhite;
     View turnBlack;
@@ -76,19 +76,26 @@ public class playwindow extends ActionBarActivity {
         turnBlack.setOnTouchListener(mTouchevent);
         int tmpID;
 
-        board = gBoard.getBoard();
+        setBoard();
         for(int i=0; i<36; i++) {
             imgBoard[i] = (ImageView) findViewById(R.id.s0 + i);
         }
         piecesSet();
     }
+
+    public void setBoard() {
+        for (int i=1; i<5; i++) {
+            for (int j=0; j<2; j++) {
+                board[i+6*j] = new Black();
+            }
+            for (int k=4; k<6; k++) {
+                board[i+6*k] = new White();
+            }
+        }
+    }
     public void onClickBoard(View v){
         ImageView image = (ImageView) v;
         int num = getNum(image);
-      //  image.setImageResource(R.drawable.ghost_white);
-      //  ImageView image2  = (ImageView) findViewById(R.id.s0 + 1);
-      //  imgBoard[20].setImageResource(R.drawable.ghost_white);
-        //Toast.makeText(getApplicationContext(), "뷰 id = "+image.getId()+"다른아이디 = "+ image2.getId(),  Toast.LENGTH_SHORT).show();
 
         if (state == 0) {//white select good
             whitePiecesSet();
@@ -169,6 +176,7 @@ public class playwindow extends ActionBarActivity {
                 return;
             }
         }
+        setUpdateCount();
     }
     int checkCoordinate (int a) {// a위치를 b위치로 이동한다라는 방식
         if(a % 6 == 0) {
@@ -498,8 +506,18 @@ public class playwindow extends ActionBarActivity {
                     })
             .show();
         }
+    }
 
+    public void setUpdateCount() {
+        TextView tvText0 = (TextView) findViewById(R.id.blackRedCount);
+        TextView tvText1 = (TextView) findViewById(R.id.blackBlueCount);
+        TextView tvText2 = (TextView) findViewById(R.id.whiteRedCount);
+        TextView tvText3 = (TextView) findViewById(R.id.whiteBlueCount);
 
+        tvText0.setText(""+blackBed);
+        tvText1.setText(""+blackGood);
+        tvText2.setText(""+whiteBed);
+        tvText3.setText(""+whiteGood);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

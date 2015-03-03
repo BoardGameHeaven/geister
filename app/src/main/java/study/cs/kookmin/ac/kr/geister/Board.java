@@ -5,6 +5,7 @@ public class Board {
 	
 	White white = new White();
 	Black black = new Black();
+
 	
 	Pieces [] moveBoard = new Pieces[4];
 	int [] moveCoordinate = new int[4];
@@ -28,10 +29,14 @@ public class Board {
 			for (int k=4; k<6; k++) {
 				board[i+6*k] = new White();
 			}
-		}		
-		
+		}
 	}
-	//말 움직이는 파트
+
+    public Pieces[] getBoard() {
+        return board;
+    }
+    public Pieces[] getMoveBoard() { return moveBoard; }
+    //말 움직이는 파트
 	void movePiece(int a) { 
 		if (turn == 0) {
 			if (!board[a].equals(white)) //흰턴일때 선택이 흰놈이 아니면 걍 나감
@@ -48,14 +53,14 @@ public class Board {
 			chooseSpace(a);
 		}
 	}
-	
+
 	int checkCoordinate (int a) {// a위치를 b위치로 이동한다라는 방식
 		if(a % 6 == 0) {
 			if (a == 0){
 				moveBoard[0] = board[a+1];
 				moveBoard[1] = board[a+6];
 				moveCoordinate[0] = a+1;
-				moveCoordinate[1] = a+6;				
+				moveCoordinate[1] = a+6;
 				return 2;
 			}
 			else if (a == 30){
@@ -72,11 +77,11 @@ public class Board {
 				moveCoordinate[0] = a+1;
 				moveCoordinate[1] = a-6;
 				moveCoordinate[2] = a+6;
-				return 3;				
+				return 3;
 			}
 		}
 		if(a % 6 == 1) {
-		
+
 			if (a == 1){
 				moveBoard[0] = board[a+1];
 				moveBoard[1] = board[a+6];
@@ -104,11 +109,11 @@ public class Board {
 				moveCoordinate[1] = a-6;
 				moveCoordinate[2] = a-1;
 				moveCoordinate[3] = a+6;
-				return 4;				
+				return 4;
 			}
 		}
 		if(a % 6 == 2) {
-			
+
 			if (a == 2){
 				moveBoard[0] = board[a+1];
 				moveBoard[1] = board[a+6];
@@ -136,7 +141,7 @@ public class Board {
 				moveCoordinate[1] = a-6;
 				moveCoordinate[2] = a-1;
 				moveCoordinate[3] = a+6;
-				return 4;				
+				return 4;
 			}
 		}
 		if(a % 6 == 3) {
@@ -167,7 +172,7 @@ public class Board {
 				moveCoordinate[1] = a-6;
 				moveCoordinate[2] = a-1;
 				moveCoordinate[3] = a+6;
-				return 4;				
+				return 4;
 			}
 		}
 		if(a % 6 == 4) {
@@ -198,7 +203,7 @@ public class Board {
 				moveCoordinate[1] = a-6;
 				moveCoordinate[2] = a-1;
 				moveCoordinate[3] = a+6;
-				return 4;				
+				return 4;
 			}
 		}
 		if(a % 6 == 5) {

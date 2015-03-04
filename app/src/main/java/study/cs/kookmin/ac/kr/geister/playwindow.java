@@ -80,6 +80,7 @@ public class playwindow extends ActionBarActivity {
         for(int i=0; i<36; i++) {
             imgBoard[i] = (ImageView) findViewById(R.id.s0 + i);
         }
+        setUpdateCount();
         piecesSet();
     }
 
@@ -540,5 +541,23 @@ public class playwindow extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if( keyCode == KeyEvent.KEYCODE_BACK )
+        {
+            new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("게임 종료").setMessage("정말로 종료하시겠습니까?").setPositiveButton("예", new DialogInterface.OnClickListener()
+            {
+                @Override
+                public void onClick( DialogInterface dialog, int which )
+                {
+                    finish();
+                }
+            }).setNegativeButton( "아니요", null ).show();
 
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
 }

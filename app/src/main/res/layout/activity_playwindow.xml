@@ -374,7 +374,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/button_black"
-        />
+        android:layout_above="@+id/board" />
 
     <ImageView
         android:layout_width="50dp"
@@ -383,7 +383,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:src="@drawable/button_white"
-        />
+        android:layout_below="@+id/board" />
 
     <ImageView
         android:layout_width="50dp"
@@ -391,7 +391,13 @@
         android:id="@+id/imageView"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/ghost_black_red" />
+        android:src="@drawable/ghost_black_red"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentRight="false"
+        android:layout_above="@+id/board" />
 
     <ImageView
         android:layout_width="50dp"
@@ -399,7 +405,8 @@
         android:id="@+id/imageView2"
         android:src="@drawable/ghost_black_blue"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/board" />
 
     <ImageView
         android:layout_width="50dp"
@@ -407,7 +414,8 @@
         android:id="@+id/imageView3"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/ghost_red" />
+        android:src="@drawable/ghost_red"
+        android:layout_below="@+id/board" />
 
     <ImageView
         android:layout_width="50dp"
@@ -415,39 +423,44 @@
         android:id="@+id/imageView4"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/ghost_blue" />
+        android:src="@drawable/ghost_blue"
+        android:layout_below="@+id/board" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="0"
         android:id="@+id/blackRedCount"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/imageView" />
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="0"
         android:id="@+id/blackBlueCount"
         android:layout_alignParentTop="true"
-        android:layout_toStartOf="@+id/imageView2" />
+        android:layout_toStartOf="@+id/imageView2"
+        android:layout_toLeftOf="@+id/imageView2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="0"
         android:id="@+id/whiteRedCount"
         android:layout_below="@+id/board"
-        android:layout_toEndOf="@+id/imageView3" />
+        android:layout_toEndOf="@+id/imageView3"
+        android:layout_toRightOf="@+id/imageView3" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="4"
+        android:text="0"
         android:id="@+id/whiteBlueCount"
         android:layout_below="@+id/board"
         android:layout_alignEnd="@+id/blackBlueCount"
-        android:layout_alignParentStart="false" />
+        android:layout_alignParentStart="false"
+        android:layout_toLeftOf="@+id/imageView4" />
 
 </RelativeLayout>

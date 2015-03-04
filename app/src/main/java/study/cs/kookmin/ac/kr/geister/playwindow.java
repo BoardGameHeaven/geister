@@ -138,10 +138,10 @@ public class playwindow extends ActionBarActivity {
             if(checkTo(num)) {
                 if(moveWhite(from, num)) {
                     piecesSet();
+                    checkVictory();
                     state++;
                     turnWhite.setVisibility(View.INVISIBLE);
                     turnBlack.setVisibility(View.VISIBLE);
-                    checkVictory();
                 }
             }
             else {
@@ -164,10 +164,10 @@ public class playwindow extends ActionBarActivity {
             if(checkTo(num)) {
                 if(moveBlack(from, num)) {
                     piecesSet();
+                    checkVictory();
                     state = 2;
                     turnBlack.setVisibility(View.INVISIBLE);
                     turnWhite.setVisibility(View.VISIBLE);
-                    checkVictory();
                 }
             }
             else {
@@ -484,7 +484,7 @@ public class playwindow extends ActionBarActivity {
     }
 
     public void checkVictory() {
-        if (whiteBed == 0 | blackGood == 0 | (board[0] instanceof White && board[0].getGood()) | (board[5] instanceof White && board[5].getGood())) {
+        if (whiteBed == 0 | blackGood == 0 | (board[0] instanceof White && board[0].getGood() && state == 5) | (board[5] instanceof White && board[5].getGood() && state == 5)) {
             new AlertDialog.Builder(this)
                     .setTitle("종료")
                     .setMessage("White Victory")
@@ -495,7 +495,7 @@ public class playwindow extends ActionBarActivity {
                     })
                     .show();
         }
-        else if (whiteGood == 0 | blackBed == 0 | (board[30] instanceof Black && board[30].getGood()) | (board[35] instanceof White && board[35].getGood())) {
+        else if (whiteGood == 0 | blackBed == 0 | (board[30] instanceof Black && board[30].getGood() && state == 3) | (board[35] instanceof Black && board[35].getGood() && state == 3)) {
             new AlertDialog.Builder(this)
                     .setTitle("종료")
                     .setMessage("Black Victory")

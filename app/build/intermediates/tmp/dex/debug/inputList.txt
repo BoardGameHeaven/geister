@@ -1,0 +1,5 @@
+C:\Users\Administrator\Documents\GitHub\geister\app\build\intermediates\classes\debug
+C:\Users\Administrator\Documents\GitHub\geister\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-925875d9448dd345587cabdb9a56f4834d2efae9.jar
+C:\Users\Administrator\Documents\GitHub\geister\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-7998dd065589a9b16a6789a7e4bc0286f0eff836.jar
+C:\Users\Administrator\Documents\GitHub\geister\app\build\intermediates\pre-dexed\debug\classes-5e9b78358bb74b3d643a6cae8978f6cc17183001.jar
+C:\Users\Administrator\Documents\GitHub\geister\app\build\intermediates\pre-dexed\debug\classes-b7ffc98ef25558235a876f280aeeb813a3e6676e.jar

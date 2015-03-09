@@ -1,9 +1,11 @@
 package study.cs.kookmin.ac.kr.geister;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class howtoplayend extends ActionBarActivity {
@@ -13,7 +15,15 @@ public class howtoplayend extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_howtoplayend);
     }
+    public void onMainClicked(View v){
+        finish();
+    }
 
+    public void onBackClicked(View v){
+        Intent intent = new Intent(howtoplayend.this, howtoplay5.class);
+        startActivity(intent);
+        finish();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

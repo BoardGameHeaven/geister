@@ -44,7 +44,7 @@ public class playwindow extends ActionBarActivity {
     private Button.OnTouchListener mTouchevent = new Button.OnTouchListener()
     {
         public boolean onTouch(View v, MotionEvent event)
-        {
+        {//누르고 있을때 해당하는 진영의 착한, 나쁜 유령을 확인할수 있음
             int action=event.getAction();
 
             if(action==MotionEvent.ACTION_DOWN)
@@ -80,11 +80,10 @@ public class playwindow extends ActionBarActivity {
         for(int i=0; i<36; i++) {
             imgBoard[i] = (ImageView) findViewById(R.id.s0 + i);
         }
-        setUpdateCount();
         piecesSet();
     }
 
-    public void setBoard() {
+    public void setBoard() {//게임판에 말들의 위치를 선정해준다.
         for (int i=1; i<5; i++) {
             for (int j=0; j<2; j++) {
                 board[i+6*j] = new Black();
@@ -125,7 +124,7 @@ public class playwindow extends ActionBarActivity {
                 state++;
             }
         }
-        else if (state == 2) {
+        else if (state == 2) {//white 턴에 이동할 말을 선택
             if(board[num] instanceof White) {
                 int count = checkCoordinate(num);
                 if(checkCountWhite(count))
@@ -135,7 +134,7 @@ public class playwindow extends ActionBarActivity {
                 state ++;
             }
         }
-        else if (state == 3) {
+        else if (state == 3) {//이동하는 위치를 선택
             if(checkTo(num)) {
                 if(moveWhite(from, num)) {
                     piecesSet();
@@ -151,7 +150,7 @@ public class playwindow extends ActionBarActivity {
                 return;
             }
         }
-        else if (state == 4) {
+        else if (state == 4) {//black턴에 이동할 말을 선택
             if(board[num] instanceof Black) {
                 int count = checkCoordinate(num);
                 if(checkCountBlack(count))
@@ -161,7 +160,7 @@ public class playwindow extends ActionBarActivity {
                 state ++;
             }
         }
-        else if (state == 5) {
+        else if (state == 5) {//이동하는 위치를 선택
             if(checkTo(num)) {
                 if(moveBlack(from, num)) {
                     piecesSet();
@@ -179,7 +178,7 @@ public class playwindow extends ActionBarActivity {
         }
         setUpdateCount();
     }
-    int checkCoordinate (int a) {// a위치를 b위치로 이동한다라는 방식
+    int checkCoordinate (int a) {// moveboard배열과 moveCoordinate배열에 이동할 수 있는 게임판 주소와 위치값을 각각 저장
         if(a % 6 == 0) {
             if (a == 0){
                 moveBoard[0] = board[a+1];
@@ -360,7 +359,7 @@ public class playwindow extends ActionBarActivity {
     }
 
 
-    boolean checkCountWhite (int count) {
+    boolean checkCountWhite (int count) {//count수 만큼 moveBoard의 값들을 확인한후 만약 이동할 공간이 없는 경우 true아닌경우 false를 return한다.
         int num =0;
         for (int i=0; i<count; i++) {
             if(moveBoard[i] instanceof White)
@@ -371,7 +370,7 @@ public class playwindow extends ActionBarActivity {
         else
             return false;
     }
-    boolean checkCountBlack (int count) {
+    boolean checkCountBlack (int count) {//count수 만큼 moveBoard의 값들을 확인한후 만약 이동할 공간이 없는 경우 true아닌경우 false를 return한다.
         int num =0;
         for (int i=0; i<count; i++) {
             if(moveBoard[i] instanceof Black)
@@ -383,7 +382,7 @@ public class playwindow extends ActionBarActivity {
             return false;
     }
 
-    public void chooseWhiteTern(int count) {
+    public void chooseWhiteTern(int count) {//white차례일때 이동할수 있는 공간에 황금 테두리를 씌운다.
         for(int i=0; i<count; i++) {
             if(moveBoard[i] != null && board[moveCoordinate[i]] instanceof Black)
                 imgBoard[moveCoordinate[i]].setImageResource(R.drawable.choose_black);
@@ -392,7 +391,7 @@ public class playwindow extends ActionBarActivity {
         }
     }
 
-    public void chooseBlackTern(int count) {
+    public void chooseBlackTern(int count) {//black차례일때 이동할수 있는 공간에 황금 테두리를 씌운다.
         for(int i=0; i<count; i++) {
             if(moveBoard[i] != null && board[moveCoordinate[i]] instanceof White)
                 imgBoard[moveCoordinate[i]].setImageResource(R.drawable.choose_white);
@@ -401,19 +400,19 @@ public class playwindow extends ActionBarActivity {
         }
     }
 
-    public boolean checkTo(int to) {
+    public boolean checkTo(int to) {//해당 턴 말이 이동하려는 곳의 말과 같지 않은 경우 true를 리턴한다.
         for (int i=0; i<4; i++) {
-            if(moveCoordinate[i] == to) {
+            if(moveCoordinate[i] == to) {//만약 white인 경우 이동하려는 곳이 moveCoordinate배열에 들어있고 그 위치에 White가 아닌경우 true를 리턴
                 if(state == 3 && !(board[to] instanceof White))
                     return true;
-                else if(state == 5 && !(board[to] instanceof Black))
+                else if(state == 5 && !(board[to] instanceof Black))//만약 black인 경우 이동하려는 곳이 moveCoordinate배열에 들어있고 그 위치에 black이 아닌경우 true를 리턴
                     return true;
             }
         }
         return false;
     }
 
-    public boolean moveWhite(int from, int to) {
+    public boolean moveWhite(int from, int to) {//white턴에 white로 이동하려고 하면 false를 리턴한다. 아닌경우 board를 바꾼후 true를 리턴한다.
         if (board[to] instanceof White)
             return false;
 
@@ -428,7 +427,7 @@ public class playwindow extends ActionBarActivity {
         board[from] = null;
         return true;
     }
-    public boolean moveBlack(int from, int to) {
+    public boolean moveBlack(int from, int to) {//black턴에 black으로 이동하려고 하면 false를 리턴한다. 아닌경우 board를 바꾼후 true를 리턴한다.
         if (board[to] instanceof Black)
             return false;
 
@@ -446,7 +445,7 @@ public class playwindow extends ActionBarActivity {
 
 
 
-    public int getNum(ImageView image) {
+    public int getNum(ImageView image) {//image와 id가 동일한 imgBoard 위치 값을 리턴한다.
         for(int i=0; i<36; i++) {
             if(imgBoard[i].getId() == image.getId())
                 return i;
@@ -454,7 +453,7 @@ public class playwindow extends ActionBarActivity {
         return -1;
     }
 
-    public void piecesSet() {
+    public void piecesSet() {//화면에 board값에 따라 말 그림과 빈칸 그림을 입력해준다.
         for (int i=0; i<36; i++) {
             if(board[i] instanceof White)
                 imgBoard[i].setImageResource(R.drawable.ghost_white);
@@ -466,7 +465,7 @@ public class playwindow extends ActionBarActivity {
         }
     }
 
-    public void whitePiecesSet() {
+    public void whitePiecesSet() {//흰말의 착한, 나쁜 말을 나타내준다.
         for (int i=0; i<36; i++) {
             if(board[i] instanceof White && board[i].getGood())
                 imgBoard[i].setImageResource(R.drawable.ghost_blue);
@@ -475,7 +474,7 @@ public class playwindow extends ActionBarActivity {
         }
     }
 
-    public void blackPiecesSet() {
+    public void blackPiecesSet() {//검은 말의 찬한, 나쁜 말을 나타내준다.
         for (int i=0; i<36; i++) {
             if(board[i] instanceof Black && board[i].getGood())
                 imgBoard[i].setImageResource(R.drawable.ghost_black_blue);
@@ -484,7 +483,7 @@ public class playwindow extends ActionBarActivity {
         }
     }
 
-    public void checkVictory() {
+    public void checkVictory() {//승리한 조건이 만족한 경우 그에따른 말을 출력해준다.
         if (whiteBed == 0 | blackGood == 0 | (board[0] instanceof White && board[0].getGood() && state == 5) | (board[5] instanceof White && board[5].getGood() && state == 5)) {
             new AlertDialog.Builder(this)
                     .setTitle("종료")
@@ -509,7 +508,7 @@ public class playwindow extends ActionBarActivity {
         }
     }
 
-    public void setUpdateCount() {
+    public void setUpdateCount() {//말의 숫자들을 계속 바꿔준다.
         TextView tvText0 = (TextView) findViewById(R.id.blackRedCount);
         TextView tvText1 = (TextView) findViewById(R.id.blackBlueCount);
         TextView tvText2 = (TextView) findViewById(R.id.whiteRedCount);
@@ -541,23 +540,5 @@ public class playwindow extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if( keyCode == KeyEvent.KEYCODE_BACK )
-        {
-            new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("게임 종료").setMessage("정말로 종료하시겠습니까?").setPositiveButton("예", new DialogInterface.OnClickListener()
-            {
-                @Override
-                public void onClick( DialogInterface dialog, int which )
-                {
-                    finish();
-                }
-            }).setNegativeButton( "아니요", null ).show();
 
-            return true;
-        }
-
-        return super.onKeyDown(keyCode, event);
-    }
 }
